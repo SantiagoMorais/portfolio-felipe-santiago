@@ -9,7 +9,7 @@ const envSchema = z.object({
   PROJECT_REPOSITORY_URL: z.string().url(),
   GITHUB_REPOSITORIES_URL: z.string().url(),
   DATABASE_URL: z.string().url(),
-  DATABASE_ACESS_TOKEN: z.string(),
+  DATABASE_ACCESS_TOKEN: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);
