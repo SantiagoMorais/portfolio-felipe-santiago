@@ -1,7 +1,9 @@
+import { Background } from "@/components/background";
+
 export default function Home() {
   return (
-    <section>
-
-    </section>
+    <main className="flex flex-col items-center">
+      <Background />
+    </main>
   );
 }
