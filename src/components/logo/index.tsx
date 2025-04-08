@@ -15,7 +15,7 @@ export const Logo = ({ className, iconSize, padding }: ILogoProps) => (
       <span className="bg-secondary ml-1 inline-block size-1.5 rounded-full" />
     </p>
     <MessageCircleCode
-      className={`transition-colors duration-150 ${twMerge("text-foreground size-12 duration-0", iconSize)}`}
+      className={`transition-colors duration-150 ${twMerge("text-foreground size-12 duration-0", `size-${iconSize}`)}`}
     />
   </div>
 );
