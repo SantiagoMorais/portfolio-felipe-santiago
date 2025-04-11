@@ -16,5 +16,5 @@ export const getProjectsByCategory = async <T>({
     }),
   });
   const json = await response.json();
-  return json.data.categories as T;
+  return json.data as T;
 };
