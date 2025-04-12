@@ -7,7 +7,7 @@ import { IGetProjectsByCategoriesQuery } from "@/core/interfaces/get-portfolio-b
 import { TCategiesList } from "@/core/types/categories-list";
 import { renderIconByCategory } from "@/utils/render-icon-by-category";
 
-import { ProjectCards } from "./project-card";
+import { ProjectCards } from "./project-cards";
 
 export const PortfolioList = ({
   categories,
