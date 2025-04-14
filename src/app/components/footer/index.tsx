@@ -11,7 +11,7 @@ export const Footer = () => (
   <footer className="mt-auto flex w-full max-w-(--breakpoint-2xl) flex-col items-center gap-4 px-4 py-8">
     <Separator />
     <section className="flex w-full flex-col items-center gap-4 py-4 md:flex-row md:justify-between md:px-16">
-      <Logo iconSize="10" />
+      <Logo iconSize="8" />
       <div className="flex w-full flex-1 flex-col items-center gap-4">
         <p className="text-muted-foreground w-full max-w-80 text-justify text-sm">
           Felipe Santiago é Desenvolvedor Web FullStack, especializado em criar
