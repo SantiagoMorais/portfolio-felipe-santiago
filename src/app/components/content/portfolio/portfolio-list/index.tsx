@@ -12,6 +12,7 @@ import { ProjectCards } from "./project-cards";
 export const PortfolioList = ({
   categories,
 }: IGetProjectsByCategoriesQuery) => {
+  const aditionalHeaderHeight = 30; // px
   const sortedCategories = [...categories].sort((a, b) => {
     if (a.categoryName === "Principais") return -1;
     if (b.categoryName === "Principais") return 1;
@@ -32,7 +33,9 @@ export const PortfolioList = ({
 
   return (
     <section className="flex w-full flex-col items-center gap-4 md:flex-row md:items-start md:gap-8">
-      <ul className="flex w-full flex-wrap items-center justify-center gap-2 md:w-fit md:flex-col">
+      <ul
+        className={`flex w-full flex-wrap items-center justify-center gap-2 md:sticky md:top-[calc(var(--header-height)+${aditionalHeaderHeight}px)] md:max-h-[calc(100vh-var(--header-height))] md:w-fit md:flex-col`}
+      >
         {sortedCategories.map((category) => (
           <li
             key={category.id}

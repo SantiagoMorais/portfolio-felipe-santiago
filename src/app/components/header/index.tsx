@@ -20,11 +20,18 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    const updateHeaderHeight = () =>
-      headerRef.current && setHeaderHeight(headerRef.current.offsetHeight);
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        const height = headerRef.current.offsetHeight;
+        setHeaderHeight(height);
+        document.documentElement.style.setProperty(
+          "--header-height",
+          `${height}px`
+        );
+      }
+    };
 
     updateHeaderHeight();
-
     window.addEventListener("resize", updateHeaderHeight);
     return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
