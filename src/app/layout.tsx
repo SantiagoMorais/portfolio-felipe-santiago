@@ -5,6 +5,9 @@ import { Rubik } from "next/font/google";
 
 import { ThemeTogglerProvider } from "@/contexts/theme-toggler-context";
 
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
+
 const rubik = Rubik({
   variable: "--font-rubik-serif",
   subsets: ["latin"],
@@ -28,8 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased`}>
+      <body
+        className={`${rubik.className} flex flex-col items-center antialiased`}
+      >
+        <Header />
         <ThemeTogglerProvider>{children}</ThemeTogglerProvider>
+        <Footer />
       </body>
     </html>
   );

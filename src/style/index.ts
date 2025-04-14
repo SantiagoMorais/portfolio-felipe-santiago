@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const header = tv({
-  base: "flex w-full max-w-(--breakpoint-2xl) items-center justify-between p-4 transition-all duration-300 z-50",
+  base: "flex w-full max-w-(--breakpoint-2xl) items-center justify-between md:px-8 p-4 transition-all duration-300 z-50",
   variants: {
     scroll: {
       primary:
