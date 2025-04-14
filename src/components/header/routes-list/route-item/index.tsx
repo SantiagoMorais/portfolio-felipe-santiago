@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRef } from "react";
 
 import { SheetClose } from "@/components/ui/sheet";
@@ -24,12 +25,12 @@ export const RouteItem = ({
   };
 
   const link = (
-    <a
+    <Link
       href={route.path}
       className={`inline-block px-3 py-1.5 ${insideASheet ? "text-xl" : "text-base"}`}
     >
       {route.title}
-    </a>
+    </Link>
   );
 
   return (

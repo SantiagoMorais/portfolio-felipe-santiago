@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -23,9 +24,9 @@ export const Footer = () => (
           {socialLinks.map(({ icon, url, title }) => (
             <li key={title}>
               <Button variant={"ghost"} asChild>
-                <a href={url} target="_blank">
+                <Link href={url} target="_blank">
                   <FontAwesomeIcon icon={icon} />
-                </a>
+                </Link>
               </Button>
             </li>
           ))}
