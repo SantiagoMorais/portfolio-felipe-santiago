@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { componentsRoutesId } from "@/utils/routes";
 
 const sentence = {
   hidden: { opacity: 1 },
@@ -73,12 +74,14 @@ export const HeroContent = ({ whatsAppLink }: { whatsAppLink: string }) => (
       <Link href={whatsAppLink} target="_blank">
         <Button className="md:px-4 md:py-6 md:text-lg">Entre em contato</Button>
       </Link>
-      <Button
-        variant="outline"
-        className="hover:border-primary hover:text-primary duration-300 hover:border-1 md:px-4 md:py-6 md:text-lg"
-      >
-        Sobre mim
-      </Button>
+      <Link href={componentsRoutesId.aboutUs.path}>
+        <Button
+          variant="outline"
+          className="hover:border-primary hover:text-primary duration-300 hover:border-1 md:px-4 md:py-6 md:text-lg"
+        >
+          Sobre mim
+        </Button>
+      </Link>
     </motion.div>
   </section>
 );
