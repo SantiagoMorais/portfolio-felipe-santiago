@@ -1,7 +1,16 @@
 export const componentsRoutesId = {
-  aboutUs: "Sobre",
-  portfolio: "Portfolio",
-  contacts: "Perguntas",
+  portfolio: {
+    title: "Portfolio",
+    path: "/",
+  },
+  aboutUs: {
+    title: "Sobre",
+    path: "/sobre",
+  },
+  blog: {
+    title: "Blog",
+    path: "/blog",
+  },
 };
 
 export interface IRoutes {
@@ -11,21 +20,15 @@ export interface IRoutes {
 
 export const navBarRoutes: IRoutes[] = [
   {
-    title: componentsRoutesId.aboutUs,
-    path: `#${componentsRoutesId.aboutUs}`,
+    title: componentsRoutesId.portfolio.title,
+    path: `/`,
   },
   {
-    title: componentsRoutesId.portfolio,
-    path: `#${componentsRoutesId.portfolio}`,
+    title: componentsRoutesId.aboutUs.title,
+    path: componentsRoutesId.aboutUs.path,
   },
   {
-    title: componentsRoutesId.contacts,
-    path: `#${componentsRoutesId.contacts}`,
+    title: componentsRoutesId.blog.title,
+    path: componentsRoutesId.blog.path,
   },
 ];
-
-export const routes = {
-  about: "#",
-  portfolio: "#",
-  contacts: "#",
-};
