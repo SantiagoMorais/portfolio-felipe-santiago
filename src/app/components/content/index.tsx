@@ -1,4 +1,4 @@
-import { ContentContainer } from "@/components/container";
+import { ContentContainer } from "@/components/content-container";
 
 import { AuroraBackground } from "./aurora-background";
 import { FAQs } from "./faqs";

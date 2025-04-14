@@ -1,9 +1,9 @@
 import { Background } from "@/components/background";
 import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-buttons";
 
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
 import { Content } from "./components/content";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
 
 export default function Home() {
   return (
