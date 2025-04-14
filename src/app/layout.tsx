@@ -3,11 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 
-import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-buttons";
 import { ThemeTogglerProvider } from "@/contexts/theme-toggler-context";
-
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
 
 const rubik = Rubik({
   variable: "--font-rubik-serif",
@@ -32,15 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${rubik.className} flex flex-col items-center antialiased`}
-      >
-        <ThemeTogglerProvider>
-          <Header />
-          {children}
-          <Footer />
-          <WhatsAppAndScrollButtons />
-        </ThemeTogglerProvider>
+      <body className={`${rubik.className} antialiased`}>
+        <ThemeTogglerProvider>{children}</ThemeTogglerProvider>
       </body>
     </html>
   );
