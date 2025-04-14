@@ -15,12 +15,12 @@ export const WhatsAppButton = () => (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
-          className="size-fit rounded-full opacity-60 hover:opacity-100 md:right-10 md:bottom-10"
+          className="size-fit max-h-14 max-w-14 rounded-full p-3 opacity-60 hover:opacity-100 md:right-10 md:bottom-10"
           size="icon"
           variant="secondary"
           asChild
         >
-          <a href={whatsAppLink} className="p-3" target="_blank">
+          <a href={whatsAppLink} target="_blank">
             <FontAwesomeIcon
               icon={faWhatsapp}
               className="size-full text-4xl text-white"
