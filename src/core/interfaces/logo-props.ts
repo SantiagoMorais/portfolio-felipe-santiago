@@ -1,5 +1,5 @@
 export interface ILogoProps {
   className?: string;
-  iconSize?: string;
+  iconClassName?: string;
   padding?: string;
 }
