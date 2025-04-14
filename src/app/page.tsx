@@ -6,7 +6,7 @@ import { Header } from "./components/header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen md:px-4 flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center md:px-4">
       <Background />
       <Header />
       <Content />
