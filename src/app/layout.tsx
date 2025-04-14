@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 
+import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-buttons";
 import { ThemeTogglerProvider } from "@/contexts/theme-toggler-context";
 
 import { Footer } from "./components/footer";
@@ -34,9 +35,12 @@ export default function RootLayout({
       <body
         className={`${rubik.className} flex flex-col items-center antialiased`}
       >
-        <Header />
-        <ThemeTogglerProvider>{children}</ThemeTogglerProvider>
-        <Footer />
+        <ThemeTogglerProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppAndScrollButtons />
+        </ThemeTogglerProvider>
       </body>
     </html>
   );
