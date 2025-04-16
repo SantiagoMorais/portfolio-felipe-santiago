@@ -45,7 +45,7 @@ export const Header = () => {
         className={pageScrolled ? header({ scroll: "primary" }) : header()}
       >
         <SheetNavBar />
-        <Logo className="size-7" />
+        <Logo iconClassName="size-7" />
         <RoutesList insideASheet={false} className="hidden md:flex" />
         <ThemeTogglerButton />
       </header>
