@@ -3,6 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 
+import { FilterPostsProvider } from "@/contexts/filterPostsContext";
+import { SearchPostByTitleProvider } from "@/contexts/searchPostByTitleContext";
 import { ThemeTogglerProvider } from "@/contexts/theme-toggler-context";
 
 const rubik = Rubik({
@@ -29,7 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.className} antialiased`}>
-        <ThemeTogglerProvider>{children}</ThemeTogglerProvider>
+        <FilterPostsProvider>
+          <SearchPostByTitleProvider>
+            <ThemeTogglerProvider>{children}</ThemeTogglerProvider>
+          </SearchPostByTitleProvider>
+        </FilterPostsProvider>
       </body>
     </html>
   );

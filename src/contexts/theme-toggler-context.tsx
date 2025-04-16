@@ -44,6 +44,8 @@ export const ThemeTogglerProvider = ({ children }: React.PropsWithChildren) => {
 export const useThemeToggler = () => {
   const context = useContext(ThemeTogglerContext);
   if (!context)
-    throw new Error("The context must be wrapped by a ThemeTogglerProvider");
+    throw new Error(
+      "The useThemeToggler must be wrapped by a ThemeTogglerProvider"
+    );
   return context;
 };
