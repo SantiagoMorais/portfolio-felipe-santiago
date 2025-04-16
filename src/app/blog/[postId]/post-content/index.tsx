@@ -1,7 +1,11 @@
+import { faUndo } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import parse from "html-react-parser";
 import Image from "next/image";
+import Link from "next/link";
 
 import { ContentContainer } from "@/components/content-container";
+import { Button } from "@/components/ui/button";
 import { IPostContentQuery } from "@/core/interfaces/post-content-query";
 import { getPostContent } from "@/db/functions/get-post-content";
 import { GET_POST_CONTENT_QUERY } from "@/db/queries/get-post-content-query";
@@ -21,7 +25,7 @@ export const PostContent = async ({ postId }: { postId: string }) => {
         <h2 className="text-foreground mx-5 px-8 text-center text-2xl font-bold first-letter:capitalize md:my-5 md:text-4xl">
           {post.title}
         </h2>
-        <div className="w-full px-5 pb-10 md:px-20 md:pb-20" id="postContent">
+        <div className="w-full px-5 pb-10 md:px-20" id="postContent">
           <div className="relative h-60 max-w-full md:h-96">
             <Image
               fill
@@ -34,7 +38,7 @@ export const PostContent = async ({ postId }: { postId: string }) => {
           {post.subtitle && <h3>{post.subtitle}</h3>}
           {post.text.html && parse(post.text.html)}
         </div>
-        <p className="bg-secondaryPanel text-medium text-textColor rounded-md px-4 py-2 text-center font-medium">
+        <p className="bg-secondaryPanel text-medium text-textColor rounded-md text-center font-medium">
           Post criado/atualizado em:{" "}
           <span className="text-primary">
             {formatDateToPTBRFormat(
@@ -42,6 +46,15 @@ export const PostContent = async ({ postId }: { postId: string }) => {
             )}
           </span>
         </p>
+        <Link href="/blog">
+          <Button className="group space-x-2">
+            <FontAwesomeIcon
+              icon={faUndo}
+              className="duration-300 group-hover:scale-110 group-hover:rotate-[-360deg]"
+            />
+            Retornar
+          </Button>
+        </Link>
       </div>
       <PostAuthor data={post.author} />
     </ContentContainer>
