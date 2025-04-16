@@ -8,8 +8,8 @@ export const getProjectsByCategory = async <T>({
   const response = await fetch(env.DATABASE_URL, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${env.DATABASE_ACCESS_TOKEN}`,
       "Content-Type": "application/json",
+      Authorization: `Bearer ${env.DATABASE_ACCESS_TOKEN}`,
     },
     body: JSON.stringify({
       query,

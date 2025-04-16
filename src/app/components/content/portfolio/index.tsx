@@ -1,6 +1,6 @@
 import { IGetProjectsByCategoriesQuery } from "@/core/interfaces/get-portfolio-by-category-query";
-import { GET_PORTFOLIO_BY_CATEGORY } from "@/db/get-portfolio-by-topics";
-import { getProjectsByCategory } from "@/db/hygraph-api";
+import { getProjectsByCategory } from "@/db/functions/get-projects-by-category";
+import { GET_PORTFOLIO_BY_CATEGORY } from "@/db/queries/get-portfolio-by-category-query";
 
 import { ContentComingSoon } from "./content-coming-soon";
 import { PortfolioDescription } from "./portfolio-description";
