@@ -8,7 +8,7 @@ export const getPosts = async <T>({
   after,
   first,
 }: {
-  after?: string;
+  after?: string | null;
   query: DocumentNode | string;
   first: number;
 }): Promise<T> => {
