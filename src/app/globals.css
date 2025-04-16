@@ -221,3 +221,84 @@
 .ReactCollapse--collapse {
   transition: height 500ms;
 }
+
+#postContent {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary relative mb-5 inline-block text-xl font-semibold first-letter:capitalize md:text-2xl;
+  }
+
+  h2::after,
+  h3::after,
+  h4::after,
+  h5::after,
+  h6::after {
+    content: "";
+    @apply from-primary absolute bottom-0 left-0 h-0.5 w-full bg-linear-to-r to-transparent;
+  }
+
+  p {
+    @apply text-foreground mb-8 w-fit text-justify text-base leading-snug last-of-type:mb-0;
+
+    a {
+      @apply text-primary font-medium underline duration-300 hover:opacity-70;
+    }
+  }
+
+  blockquote {
+    @apply border-primary bg-accent text-primary mb-4 rounded-r-lg border-l-4 p-4 text-sm;
+  }
+
+  ul {
+    @apply text-foreground mb-4 ml-8 list-disc text-base;
+  }
+
+  ol {
+    @apply text-foreground mb-4 ml-8 list-decimal text-base;
+  }
+
+  img {
+    @apply border-primary shadow-secondary m-auto mb-8 block h-fit max-h-120 w-fit max-w-1/2 rounded-lg border object-cover object-center;
+  }
+
+  #postBanner {
+    @apply w-full max-w-full md:h-fit md:max-h-full md:max-w-320;
+  }
+
+  iframe {
+    @apply h-[calc(60vw*9/16)] max-h-[calc(80rem*9/16)] w-[60vw] max-w-320 rounded-lg;
+  }
+
+  pre {
+    @apply border-primary bg-accent text-foreground mb-6 w-full overflow-auto rounded-lg border md:mb-10 md:w-fit;
+
+    code {
+      @apply bg-accent border-0 p-4 font-mono text-[3dvw] font-normal md:text-sm;
+    }
+  }
+
+  code {
+    @apply border-secondary bg-accent text-primary rounded-md border border-none px-2 font-mono text-sm font-semibold md:text-base;
+  }
+
+  pre code {
+    @apply text-foreground block;
+    white-space: pre-wrap;
+  }
+
+  table {
+    @apply my-10 w-full md:w-fit;
+  }
+
+  table thead tr th {
+    @apply border-primary bg-muted-foreground border md:px-5 md:py-2;
+  }
+
+  tbody tr td {
+    @apply border-foreground w-full border text-center md:px-5 md:py-2;
+  }
+}

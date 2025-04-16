@@ -4,8 +4,6 @@ export const GET_PORTFOLIO_BY_CATEGORY = `
       id
       categoryName
       portfolio {
-        updatedAt
-        createdAt
         name
         topics
         htmlUrl

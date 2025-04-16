@@ -1,14 +1,11 @@
-"use server";
 import { env } from "@/env";
 
-export const getPosts = async <T>({
+export const getPostContent = async <T>({
   query,
-  after,
-  first,
+  id,
 }: {
-  after?: string | null;
+  id: string;
   query: string;
-  first: number;
 }): Promise<T> => {
   const response = await fetch(env.DATABASE_URL, {
     method: "POST",
@@ -19,8 +16,7 @@ export const getPosts = async <T>({
     body: JSON.stringify({
       query,
       variables: {
-        after,
-        first,
+        id,
       },
     }),
   });
