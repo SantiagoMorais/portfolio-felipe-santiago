@@ -7,6 +7,8 @@ import { getPostContent } from "@/db/functions/get-post-content";
 import { GET_POST_CONTENT_QUERY } from "@/db/queries/get-post-content-query";
 import { formatDateToPTBRFormat } from "@/utils/format-date-to-pt-br-format";
 
+import { PostAuthor } from "./post-author";
+
 export const PostContent = async ({ postId }: { postId: string }) => {
   const { post } = await getPostContent<IPostContentQuery>({
     query: GET_POST_CONTENT_QUERY,
@@ -41,6 +43,7 @@ export const PostContent = async ({ postId }: { postId: string }) => {
           </span>
         </p>
       </div>
+      <PostAuthor data={post.author} />
     </ContentContainer>
   );
 };
