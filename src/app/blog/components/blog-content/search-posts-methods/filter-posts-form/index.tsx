@@ -14,7 +14,7 @@ export const FilterPostsForm = ({ filters }: { filters: IPostsFilters }) => {
 
   return (
     <div
-      className="group relative flex flex-1 flex-col gap-2"
+      className="group relative flex flex-1 flex-col pb-2"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
