@@ -15,8 +15,8 @@ export const PortfolioDescription = () => (
       uma amostra do meu trabalho. Desenvolvido com Next.js, TypeScript,
       Tailwind CSS e GraphQL.
     </p>
-    <div>
-      <Button variant="link">
+    <div className="flex flex-col md:flex-row">
+      <Button variant="link" className="flex-1">
         <a
           className="text-lg"
           target="_blank"
@@ -26,7 +26,7 @@ export const PortfolioDescription = () => (
           Todos os Respositórios
         </a>
       </Button>
-      <Button variant="link">
+      <Button variant="link" className="flex-1">
         <a className="text-lg" target="_blank" href={env.GITHUB_PROFILE_URL}>
           <FontAwesomeIcon icon={faGithub} className="mr-2" />
           Meu Github
