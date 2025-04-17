@@ -5,10 +5,14 @@ export const getPosts = async <T>({
   query,
   after,
   first,
+  title,
+  filter,
 }: {
   after?: string | null;
   query: string;
   first: number;
+  title?: string;
+  filter?: string;
 }): Promise<T> => {
   const response = await fetch(env.DATABASE_URL, {
     method: "POST",
@@ -21,6 +25,8 @@ export const getPosts = async <T>({
       variables: {
         after,
         first,
+        ...(title ? { title } : {}),
+        ...(filter ? { filter } : {}),
       },
     }),
   });

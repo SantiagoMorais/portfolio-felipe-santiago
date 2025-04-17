@@ -5,7 +5,9 @@ import { IPostsData } from "@/core/interfaces/get-posts-query";
 import { IPostsFilters } from "@/core/interfaces/posts-filters-query";
 
 import { FilterPostsForm } from "./filter-posts-form";
+import { FilteredPosts } from "./filtered-posts";
 import { PostsList } from "./posts-list";
+import { PostsSearchedByTitleList } from "./posts-searched-by-title-list";
 import { SearchPostsByTitleForm } from "./search-posts-by-title-form";
 
 export const SearchPostsMethods = ({
@@ -19,8 +21,9 @@ export const SearchPostsMethods = ({
   const { filter } = useFilterPosts();
 
   const content = () => {
-    if (postTitle) return "";
-    if (filter) return "";
+    if (postTitle)
+      return <PostsSearchedByTitleList key={postTitle} title={postTitle} />;
+    if (filter) return <FilteredPosts key={filter} filter={filter} />;
     return <PostsList initialData={initialData} />;
   };
 

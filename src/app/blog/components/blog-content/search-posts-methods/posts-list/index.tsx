@@ -14,7 +14,7 @@ import { IPostsData } from "@/core/interfaces/get-posts-query";
 import { getPosts } from "@/db/functions/get-posts";
 import { GET_POSTS_QUERY } from "@/db/queries/get-posts-query";
 
-import { PostCard } from "./post-card";
+import { PostCard } from "../post-card";
 
 export const PostsList = ({ initialData }: { initialData: IPostsData }) => {
   const [postsData, setPostsData] = useState<IPostsData>(initialData);
