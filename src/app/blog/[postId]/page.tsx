@@ -1,12 +1,9 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-buttons";
+import { IPostPageProps } from "@/core/interfaces/post-page-props";
 
 import { PostContent } from "./post-content";
-
-interface IPostPageProps {
-  params: Promise<{ postId: string }>;
-}
 
 export default async function PostPage({ params }: IPostPageProps) {
   const { postId } = await params;
