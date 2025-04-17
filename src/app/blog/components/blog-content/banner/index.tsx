@@ -21,15 +21,13 @@ export const Banner = () => (
         Felipe Santiago Desenvolvedor Web
       </p>
     </article>
-    <div className="z-10 flex flex-1 justify-end rounded-lg border p-4 md:justify-start">
+    <div className="z-10 flex flex-1 justify-end rounded-lg border border-white p-4 md:justify-start">
       <p className="flex h-20 max-w-60 flex-col gap-2 text-sm text-white">
-        <span className="bg-accent/50 rounded-md px-1 text-sm">
+        <span className="rounded-md bg-gray-400 px-1 text-sm">
           #programação
         </span>
-        <span className="bg-accent/50 rounded-md px-1 text-sm">#web</span>
-        <span className="bg-accent/50 rounded-md px-1 text-sm">
-          #tecnologia
-        </span>
+        <span className="rounded-md bg-gray-400 px-1 text-sm">#web</span>
+        <span className="rounded-md bg-gray-400 px-1 text-sm">#tecnologia</span>
       </p>
     </div>
   </section>
