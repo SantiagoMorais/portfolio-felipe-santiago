@@ -4,17 +4,16 @@ import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-butto
 
 import { PostContent } from "./post-content";
 
-export default async function PostPage({
-  params,
-}: {
-  params: {
-    postId: string;
-  };
-}) {
+interface IPostPageProps {
+  params: Promise<{ postId: string }>;
+}
+
+export default async function PostPage({ params }: IPostPageProps) {
+  const { postId } = await params;
   return (
     <main className="flex min-h-screen flex-col items-center md:px-4">
       <Header />
-      <PostContent postId={params.postId} />
+      <PostContent postId={postId} />
       <Footer />
       <WhatsAppAndScrollButtons />
     </main>
