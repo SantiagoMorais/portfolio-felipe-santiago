@@ -133,6 +133,7 @@
   --drop-shadow-all-around: 0 0 10px;
   --font-family-rubik: "Rubik", sans-serif;
   --font-family-cactus-classical: "Cactus Classical Serif", serif;
+  --shadow-all-around: 0 0 10px;
 
   @keyframes aurora-animation {
     0% {
