@@ -26,13 +26,14 @@ export const PostContent = async ({ postId }: { postId: string }) => {
           {post.title}
         </h2>
         <div className="w-full px-5 pb-10 md:px-20" id="postContent">
-          <div className="relative h-60 max-w-full md:h-96">
+          <div className="relative flex max-h-60 w-full justify-center md:max-h-96">
             <Image
-              fill
               src={post.image.url}
               alt={`Imagem do post ${post.title}`}
-              id="postBanner"
-              className="object-contain"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-full w-auto object-contain"
             />
           </div>
           {post.subtitle && <h3>{post.subtitle}</h3>}

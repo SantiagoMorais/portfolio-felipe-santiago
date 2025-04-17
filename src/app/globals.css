@@ -230,15 +230,10 @@
   h5,
   h6 {
     @apply text-primary relative mb-5 inline-block text-xl font-semibold first-letter:capitalize md:text-2xl;
-  }
 
-  h2::after,
-  h3::after,
-  h4::after,
-  h5::after,
-  h6::after {
-    content: "";
-    @apply from-primary absolute bottom-0 left-0 h-0.5 w-full bg-linear-to-r to-transparent;
+    strong {
+      @apply font-semibold;
+    }
   }
 
   p {
