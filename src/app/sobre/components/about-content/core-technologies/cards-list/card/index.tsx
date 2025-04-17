@@ -2,13 +2,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ICursorPosition } from "@/core/interfaces/routes-list-props";
-import { ITechnologyCard } from "@/utils/technology-cards";
-
-interface ITechnologyCardProps {
-  card: ITechnologyCard;
-  setPosition: React.Dispatch<React.SetStateAction<ICursorPosition>>;
-}
+import { ITechnologyCardProps } from "@/core/interfaces/technology-card-props";
 
 export const TechnologyCard = ({ card, setPosition }: ITechnologyCardProps) => {
   const ref = useRef<HTMLDivElement | null>(null);

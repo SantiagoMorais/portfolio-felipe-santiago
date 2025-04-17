@@ -2,22 +2,12 @@ import Image from "next/image";
 
 import imageNotFound from "@/assets/imgs/image-not-found.jpg";
 import { Card, CardContent } from "@/components/ui/card";
-import { IPortfolioData } from "@/core/interfaces/get-portfolio-by-category-query";
+import { IProjectCardsProps } from "@/core/interfaces/project-cards-props";
 
 import { ProjectCardHeader } from "./project-card-header";
 import { ProjectLinks } from "./project-links";
 
-export const ProjectCards = ({
-  selectedCategory,
-}: {
-  selectedCategory:
-    | {
-        id: string;
-        categoryName: string;
-        portfolio: Array<IPortfolioData>;
-      }
-    | undefined;
-}) => (
+export const ProjectCards = ({ selectedCategory }: IProjectCardsProps) => (
   <div className="flex flex-col items-center gap-8">
     <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
       {selectedCategory?.portfolio.map((project) => (

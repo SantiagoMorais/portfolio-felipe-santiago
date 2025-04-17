@@ -7,22 +7,9 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { IPostCardProps } from "@/core/interfaces/post-card-props";
 
-export const PostCard = ({
-  postData,
-}: {
-  postData: {
-    id: string;
-    title: string;
-    subtitle?: string;
-    image: {
-      url: string;
-    };
-    author: {
-      name: string;
-    };
-  };
-}) => (
+export const PostCard = ({ postData }: IPostCardProps) => (
   <Link href={`/blog/${postData.id}`} className="w-full">
     <Card className="h-full w-full cursor-pointer gap-0 overflow-hidden rounded-lg pt-0 pb-2 duration-300 hover:scale-95 hover:opacity-80">
       <CardHeader className="relative h-80 w-full md:h-60">
