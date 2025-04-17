@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { env } from "@/env";
 
 export const GithubRepositoriesLink = () => (
-  <Button>
+  <Button className="md:translate-x-1/2">
     <a
       href={env.GITHUB_REPOSITORIES_URL}
       target="_blank"
