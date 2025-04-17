@@ -56,7 +56,7 @@ export const PostsList = ({ initialData }: { initialData: IPostsData }) => {
   })();
 
   return (
-    <section className="flex flex-col items-center gap-8">
+    <section className="flex w-full flex-col items-center gap-8">
       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {postsData.postsConnection.edges.map(({ node }) => (
           <PostCard key={node.id} postData={node} />

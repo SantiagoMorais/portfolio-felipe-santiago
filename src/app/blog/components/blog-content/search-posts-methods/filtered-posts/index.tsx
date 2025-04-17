@@ -27,7 +27,7 @@ export const FilteredPosts = ({ filter }: { filter: string }) => {
 
   if (!data) return <p>Carregando posts...</p>;
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex w-full flex-col items-center gap-2">
       <ButtonResetSearchHooks />
       <p className="text-center text-lg">
         {data && data.postsConnection.edges.length > 0
