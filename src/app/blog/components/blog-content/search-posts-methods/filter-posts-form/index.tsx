@@ -18,9 +18,9 @@ export const FilterPostsForm = ({ filters }: { filters: IPostsFilters }) => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="bg-background flex min-w-0 flex-1 cursor-pointer items-center md:w-full">
+      <div className="bg-background flex min-w-0 flex-1 cursor-pointer items-stretch md:w-full">
         <p
-          className={`border-ring group-hover:ring-muted text-foreground flex h-full min-w-0 flex-1 items-center rounded-md rounded-r-none border border-r-0 px-3 duration-300 group-hover:ring-2 ${!filter && "text-foreground/50"}`}
+          className={`border-ring/60 group-hover:border-ring/100 group-hover:ring-muted/60 text-foreground flex min-w-0 flex-1 items-center rounded-md rounded-r-none border border-r-0 px-3 duration-300 group-hover:ring-3 ${!filter && "text-foreground/50"}`}
         >
           {!filter ? "Selecione um filtro" : filter}
         </p>
