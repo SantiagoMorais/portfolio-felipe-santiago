@@ -4,6 +4,7 @@ import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
 import { IPostsData } from "@/core/interfaces/get-posts-query";
 
 import { PostsList } from "./posts-list";
+import { SearchPostsByTitleForm } from "./search-posts-by-title-form";
 
 export const SearchPostsMethods = ({
   initialData,
@@ -21,7 +22,9 @@ export const SearchPostsMethods = ({
 
   return (
     <section className="flex w-full flex-col">
-      <div className="flex flex-col gap-4 p-4 pt-10 md:flex-row md:px-10"></div>
+      <div className="flex flex-col gap-4 pb-8 md:flex-row">
+        <SearchPostsByTitleForm />
+      </div>
       {content()}
     </section>
   );
