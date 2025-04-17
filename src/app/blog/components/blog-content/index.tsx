@@ -4,7 +4,7 @@ import { getPosts } from "@/db/functions/get-posts";
 import { GET_POSTS_QUERY } from "@/db/queries/get-posts-query";
 
 import { Banner } from "./banner";
-import { PostsList } from "./posts-list";
+import { SearchPostsMethods } from "./search-posts-methods";
 
 export const BlogContent = async () => {
   const data = await getPosts<IPostsData>({
@@ -15,7 +15,7 @@ export const BlogContent = async () => {
   return (
     <ContentContainer>
       <Banner />
-      <PostsList initialData={data} />
+      <SearchPostsMethods initialData={data} />
     </ContentContainer>
   );
 };
