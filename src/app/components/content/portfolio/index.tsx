@@ -14,7 +14,7 @@ export const Portfolio = async () => {
     });
 
   const renderContent = () => {
-    if (categories.length) return <ContentComingSoon />;
+    if (!categories.length) return <ContentComingSoon />;
     return <PortfolioList categories={categories} />;
   };
 

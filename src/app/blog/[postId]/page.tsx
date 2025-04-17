@@ -4,13 +4,13 @@ import { WhatsAppAndScrollButtons } from "@/components/whatsapp-and-scroll-butto
 
 import { PostContent } from "./post-content";
 
-interface IPostPageProps {
+export default async function PostPage({
+  params,
+}: {
   params: {
     postId: string;
   };
-}
-
-export default function PostPage({ params }: IPostPageProps) {
+}) {
   return (
     <main className="flex min-h-screen flex-col items-center md:px-4">
       <Header />
