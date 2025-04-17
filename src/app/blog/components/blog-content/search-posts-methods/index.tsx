@@ -1,4 +1,5 @@
 "use client";
+import { ButtonResetSearchHooks } from "@/components/button-reset-search-hooks";
 import { useFilterPosts } from "@/contexts/filterPostsContext";
 import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
 import { IPostsData } from "@/core/interfaces/get-posts-query";
@@ -33,7 +34,10 @@ export const SearchPostsMethods = ({
         <SearchPostsByTitleForm />
         <FilterPostsForm filters={filters} />
       </div>
-      {content()}
+      <div className="flex w-full flex-col items-center gap-6">
+        {(filter || postTitle) && <ButtonResetSearchHooks />}
+        {content()}
+      </div>
     </section>
   );
 };
