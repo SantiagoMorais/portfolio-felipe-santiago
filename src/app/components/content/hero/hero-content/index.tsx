@@ -20,7 +20,7 @@ const letter = {
 };
 
 export const HeroContent = ({ whatsAppLink }: { whatsAppLink: string }) => (
-  <section className="flex min-h-[50dvh] w-full min-w-60 flex-1 flex-col justify-center gap-10 md:h-screen md:max-h-[768px] md:min-h-fit md:min-w-80">
+  <section className="flex w-full min-w-60 flex-1 flex-col justify-center gap-10 md:h-screen md:max-h-[768px] md:min-h-[50dvh] md:min-h-fit md:min-w-80">
     <motion.h2
       className="leading-loose"
       variants={sentence}
@@ -59,7 +59,7 @@ export const HeroContent = ({ whatsAppLink }: { whatsAppLink: string }) => (
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="text-muted-foreground max-w-(--breakpoint-lg) text-lg"
+      className="text-muted-foreground max-w-(--breakpoint-lg) text-justify text-lg md:text-start"
     >
       Desenvolvedor web com foco em React, Next e desenvolvimento de APIs Node
       com TypeScript. Veja meus projetos no meu portfólio e entre em contato
@@ -71,13 +71,22 @@ export const HeroContent = ({ whatsAppLink }: { whatsAppLink: string }) => (
       transition={{ duration: 0.5, delay: 0.8 }}
       className="flex w-full flex-wrap gap-4"
     >
-      <Link href={whatsAppLink} target="_blank">
-        <Button className="md:px-4 md:py-6 md:text-lg">Entre em contato</Button>
+      <Link
+        href={whatsAppLink}
+        target="_blank"
+        className="w-fit flex-1 md:flex-none"
+      >
+        <Button className="w-full min-w-40 md:w-fit md:px-4 md:py-6 md:text-lg">
+          Entre em contato
+        </Button>
       </Link>
-      <Link href={componentsRoutesId.aboutUs.path}>
+      <Link
+        href={componentsRoutesId.aboutUs.path}
+        className="w-fit flex-1 md:flex-none"
+      >
         <Button
           variant="outline"
-          className="hover:border-primary hover:text-primary duration-300 hover:border-1 md:px-4 md:py-6 md:text-lg"
+          className="hover:border-primary hover:text-primary w-full min-w-40 duration-300 hover:border-1 md:w-fit md:px-4 md:py-6 md:text-lg"
         >
           Sobre mim
         </Button>
