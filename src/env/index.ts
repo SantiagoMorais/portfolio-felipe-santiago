@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  PHONE_NUMBER: z.string().default("5531996951033"),
+  PHONE_NUMBER: z.coerce.string().default("5531996951033"),
   EMAIL: z.string().email().optional(),
   LINKEDIN_URL: z.string().url().optional(),
   GITHUB_PROFILE_URL: z.string().url(),
