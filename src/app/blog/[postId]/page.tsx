@@ -7,6 +7,7 @@ import { PostContent } from "./post-content";
 
 export default async function PostPage({ params }: IPostPageProps) {
   const { postId } = await params;
+
   return (
     <main className="flex min-h-screen flex-col items-center md:px-4">
       <Header />
