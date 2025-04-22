@@ -4,6 +4,7 @@ export const GET_FILTERED_POSTS_QUERY = `
       where: { filter_some: { title_contains: $filter } }
       after: $after
       first: $first
+      orderBy: createdAt_DESC
     ) {
       pageInfo {
         hasNextPage

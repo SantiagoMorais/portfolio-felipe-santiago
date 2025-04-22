@@ -4,6 +4,7 @@ export const GET_POSTS_SEARCHED_BY_TITLE_QUERY = `
       where: { title_contains: $title }
       after: $after
       first: $first
+      orderBy: createdAt_DESC
     ) {
       pageInfo {
         hasNextPage
