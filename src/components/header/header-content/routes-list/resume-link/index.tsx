@@ -29,7 +29,12 @@ export const ResumeLink = ({
 
   const link = ({ resume }: { resume: IResumesContent }) => {
     return (
-      <a href={resume.document.url} target="_blank" key={resume.title}>
+      <a
+        className={`inline-block px-3 py-1.5 ${insideASheet ? "text-xl" : "text-base"}`}
+        href={resume.document.url}
+        target="_blank"
+        key={resume.title}
+      >
         {resume.title}
       </a>
     );
