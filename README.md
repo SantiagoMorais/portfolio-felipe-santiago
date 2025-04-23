@@ -4,6 +4,13 @@
 
 ## Sumário
 
+- [Dependências](#dependências)
+- [Dependências de Desenvolvimento](#depêndencias-de-desenvolvimento)
+- [Objetivos](#objetivos)
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Informações do Autor](#informações-do-autor)
+
 ## Dependências
 
 - [Next.js](https://nextjs.org/): Framework React completo para aplicações web rápidas, com renderização do lado do servidor e geração de páginas estáticas.
