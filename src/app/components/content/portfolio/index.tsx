@@ -8,10 +8,9 @@ import { PortfolioList } from "./portfolio-list";
 import { GithubRepositoriesLink } from "./portfolio-list/github-repositories-link";
 
 export const Portfolio = async () => {
-  const { categories } =
-    await getDataFromApi<IGetProjectsByCategoriesQuery>({
-      query: GET_PORTFOLIO_BY_CATEGORY,
-    });
+  const { categories } = await getDataFromApi<IGetProjectsByCategoriesQuery>({
+    query: GET_PORTFOLIO_BY_CATEGORY,
+  });
 
   const renderContent = () => {
     if (!categories.length) return <ContentComingSoon />;
