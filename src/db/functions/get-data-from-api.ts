@@ -1,7 +1,7 @@
 "use server";
 import { env } from "@/env";
 
-export const getProjectsByCategory = async <T>({
+export const getDataFromApi = async <T>({
   query,
 }: {
   query: string;

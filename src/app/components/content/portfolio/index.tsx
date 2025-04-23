@@ -1,5 +1,5 @@
 import { IGetProjectsByCategoriesQuery } from "@/core/interfaces/get-portfolio-by-category-query";
-import { getProjectsByCategory } from "@/db/functions/get-projects-by-category";
+import { getDataFromApi } from "@/db/functions/get-data-from-api";
 import { GET_PORTFOLIO_BY_CATEGORY } from "@/db/queries/get-portfolio-by-category-query";
 
 import { ContentComingSoon } from "./content-coming-soon";
@@ -9,7 +9,7 @@ import { GithubRepositoriesLink } from "./portfolio-list/github-repositories-lin
 
 export const Portfolio = async () => {
   const { categories } =
-    await getProjectsByCategory<IGetProjectsByCategoriesQuery>({
+    await getDataFromApi<IGetProjectsByCategoriesQuery>({
       query: GET_PORTFOLIO_BY_CATEGORY,
     });
 
