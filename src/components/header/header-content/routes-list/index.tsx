@@ -9,9 +9,14 @@ import {
 import { navBarRoutes } from "@/utils/routes";
 
 import { Cursor } from "./cursor";
+import { ResumeLink } from "./resume-link";
 import { RouteItem } from "./route-item";
 
-export const RoutesList = ({ insideASheet, className }: IRoutesListProps) => {
+export const RoutesList = ({
+  insideASheet,
+  className,
+  resumes,
+}: IRoutesListProps) => {
   const [position, setPosition] = useState<ICursorPosition>({
     top: 0,
     left: 0,
@@ -40,6 +45,7 @@ export const RoutesList = ({ insideASheet, className }: IRoutesListProps) => {
           insideASheet={insideASheet}
         />
       ))}
+      <ResumeLink resumes={resumes} linksData={{ setPosition, insideASheet }} />
       <Cursor position={position} />
     </ul>
   );

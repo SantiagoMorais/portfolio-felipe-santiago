@@ -1,3 +1,7 @@
+import { IRoutes } from "@/utils/routes";
+
+import { IResumesContent } from "./resumes-query";
+
 export interface ICursorPosition {
   top: number;
   left: number;
@@ -15,4 +19,5 @@ export interface IRouteItemProps {
 export interface IRoutesListProps {
   insideASheet?: boolean;
   className?: string;
+  resumes: Array<IResumesContent>;
 }

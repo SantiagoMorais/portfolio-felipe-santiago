@@ -12,10 +12,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { IResumesQuery } from "@/core/interfaces/resumes-query";
 
 import { RoutesList } from "../routes-list";
 
-export const SheetNavBar = () => {
+export const SheetNavBar = ({ resumes }: IResumesQuery) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export const SheetNavBar = () => {
         <SheetHeader className="relative">
           <SheetTitle className="text-start text-2xl">Navegação</SheetTitle>
           <Separator />
-          <RoutesList insideASheet />
+          <RoutesList resumes={resumes} insideASheet />
         </SheetHeader>
       </SheetContent>
     </Sheet>

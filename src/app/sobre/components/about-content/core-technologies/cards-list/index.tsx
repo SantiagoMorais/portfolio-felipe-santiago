@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { Cursor } from "@/components/header/routes-list/cursor";
+import { Cursor } from "@/components/header/header-content/routes-list/cursor";
 import { ICursorPosition } from "@/core/interfaces/routes-list-props";
 import { technologyCards } from "@/utils/technology-cards";
 
