@@ -8,6 +8,7 @@ export const getPostContent = async <T>({
   query: string;
 }): Promise<T> => {
   const response = await fetch(env.DATABASE_URL, {
+    next: { revalidate: 60 },
     method: "POST",
     headers: {
       "Content-Type": "application/json",

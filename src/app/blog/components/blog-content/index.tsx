@@ -21,6 +21,8 @@ export const BlogContent = async () => {
     query: GET_POSTS_QUERY,
   });
 
+  console.log(data.postsConnection.edges);
+
   const filters = await getDataFromApi<IPostsFilters>({
     query: GET_FILTERS_QUERY,
   });

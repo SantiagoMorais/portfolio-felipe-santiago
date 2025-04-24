@@ -15,6 +15,7 @@ export const getPosts = async <T>({
   filter?: string;
 }): Promise<T> => {
   const response = await fetch(env.DATABASE_URL, {
+    next: { revalidate: 60 },
     method: "POST",
     headers: {
       "Content-Type": "application/json",
